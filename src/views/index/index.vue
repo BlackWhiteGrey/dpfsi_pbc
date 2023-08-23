@@ -108,11 +108,7 @@
                 <Row type="flex" justify="center" align="middle" class="number">
                   <Col>
                     <span class="dynamic-num">
-                      <countTo
-                        :startVal="0"
-                        :endVal="rate"
-                        :duration="3000"
-                      ></countTo>
+                      {{ rate }}
                     </span>
                     <span style="font-size: 16px; font-weight: 300">%</span>
                   </Col>
@@ -140,11 +136,7 @@
                 <Row type="flex" justify="center" align="middle" class="number">
                   <Col>
                     <span class="dynamic-num">
-                      <countTo
-                        :startVal="0"
-                        :endVal="statics.shiyongnum"
-                        :duration="3000"
-                      ></countTo>
+                      {{ statics.shiyongnum }}
                     </span>
                     <span style="font-size: 16px; font-weight: 300">%</span>
                   </Col>
@@ -172,11 +164,7 @@
                 <Row type="flex" justify="center" align="middle" class="number">
                   <Col>
                     <span class="dynamic-num">
-                      <countTo
-                        :startVal="0"
-                        :endVal="statics.duibiaonum"
-                        :duration="3000"
-                      ></countTo>
+                      {{ statics.duibiaonum }}
                     </span>
                     <span style="font-size: 16px; font-weight: 300">%</span>
                   </Col>
@@ -204,11 +192,7 @@
                 <Row type="flex" justify="center" align="middle" class="number">
                   <Col>
                     <span class="dynamic-num">
-                      <countTo
-                        :startVal="0"
-                        :endVal="statics.feedbacknum"
-                        :duration="3000"
-                      ></countTo>
+                      {{ statics.feedbacknum }}
                     </span>
                     <span style="font-size: 16px; font-weight: 300">家</span>
                   </Col>
@@ -459,13 +443,12 @@
 
 <script>
 import rankList from '@/components/rankList';
-// import 'echarts/map/js/china.js';
+import '../../common/js/china.js';
 import * as echarts from 'echarts';
-import countTo from 'vue-count-to';
 import { TagCanvas } from '../../common/js/tagcanvas.min.js';
 import { geoCoordMap } from '../../common/js/geocoord.js';
 export default {
-  components: { countTo, rankList },
+  components: { rankList },
   data() {
     return {
       naireList: [],

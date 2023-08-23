@@ -13,6 +13,7 @@ export const getNaire = ({ commit, state }, data) => {
     u_ip: data.u_ip,
   });
 };
+
 // questionList
 export const editNaire = ({ commit, state }, data) => {
   console.log('commit REQUEST_QUESTION_LIST');

@@ -9,37 +9,37 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: () => import('@/views/login/login'),
+    component: () => import('@/views/login/login.vue'),
   },
   {
     path: '/nfcc',
     name: 'NFCC',
-    component: () => import('@/views/nfcc/nfcc'),
+    component: () => import('@/views/nfcc/nfcc.vue'),
   },
   {
     path: '/standard',
     name: 'standard',
-    component: () => import('@/views/nfcc/standard'),
+    component: () => import('@/views/nfcc/standard.vue'),
   },
   {
     path: '/complete',
     name: 'complete',
-    component: () => import('@/views/common/complete/complete'),
+    component: () => import('@/views/common/complete/complete.vue'),
   },
   {
     path: '/view/:nid',
     name: 'View',
-    component: () => import('@/views/view/view'),
+    component: () => import('@/views/view/view.vue'),
   },
   {
     path: '/preview/:nid',
     name: 'preview',
-    component: () => import('@/views/view/preview'),
+    component: () => import('@/views/view/preview.vue'),
   },
   {
     path: '/view/:nid/:uid',
     name: 'Admin View',
-    component: () => import('@/views/view/view'),
+    component: () => import('@/views/view/view.vue'),
   },
   {
     path: '/platform',
@@ -56,29 +56,29 @@ const routes = [
       {
         path: 'list',
         name: 'Naire List',
-        component: () => import('@/views/list/list'),
+        component: () => import('@/views/list/list.vue'),
         meta: { importsAuth: true },
       },
       {
         path: 'edit',
         name: 'Edit Question',
-        component: () => import('@/views/edit/edit'),
+        component: () => import('@/views/edit/edit.vue'),
         meta: { importsAuth: true },
       },
       {
         path: 'edit/:id',
         name: 'Edit Detail',
-        component: () => import('@/views/edit/update'),
+        component: () => import('@/views/edit/update.vue'),
         meta: { importsAuth: true },
       },
       {
         path: 'user',
-        component: () => import('@/views/user/user'),
+        component: () => import('@/views/user/user.vue'),
         meta: { importsAuth: true },
       },
       {
         path: 'admin',
-        component: () => import('@/views/admin/changepwd'),
+        component: () => import('@/views/admin/changepwd.vue'),
         meta: { importsAuth: true },
       },
     ],
@@ -92,7 +92,7 @@ const routes = [
   {
     path: '/404',
     name: '404页面',
-    component: () => import('@/views/common/error/error'),
+    component: () => import('@/views/common/error/error.vue'),
   },
 ];
 

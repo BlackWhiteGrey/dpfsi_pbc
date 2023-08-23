@@ -141,7 +141,7 @@ export default {
       }
     },
     initailSocket() {
-      this.ws = new WebSocket('ws://www.dpfsi.top:4000');
+      this.ws = new WebSocket('wss://www.dpfsi.com:4000');
       let _this = this;
       this.ws.onopen = function () {
         console.log('握手成功');
