@@ -11,6 +11,7 @@ import myConfig from './config';
 
 axios.defaults.baseURL = myConfig.APIBaseURL;
 
+console.log("I'm here");
 // http request 拦截器
 axios.interceptors.request.use(
   (config) => {
