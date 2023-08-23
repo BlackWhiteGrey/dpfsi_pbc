@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import lottie from 'lottie-web';
 import * as animationData from '../../../../static/js/404.json';
 
 export default {
