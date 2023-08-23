@@ -1,0 +1,52 @@
+{
+  "name": "view-ui-project-vite",
+  "version": "1.0.0",
+  "description": "a template project for vue3, vue-router, vuex, ViewUIPlus and vite.",
+  "scripts": {
+    "serve": "npm run dev",
+    "dev": "vite serve",
+    "build": "vite build",
+    "build:staging": "vite build --mode=staging",
+    "preview": "npm run build && vite preview",
+    "preview:staging": "npm run build:staging && vite preview --mode=staging",
+    "lint": "eslint ./src --ext .js,.vue",
+    "lint:fix": "eslint ./src --ext .js,.vue --fix",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "axios": "^0.27.0",
+    "view-ui-plus": "^1.3.0",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.14",
+    "vuex": "^4.0.2",
+    "clipboard": "^1.7.1",
+    "fastclick": "^1.0.6",
+    "html2canvas": "^1.0.0-rc.7",
+    "iview": "=2.0.0-rc.13",
+    "js-sha1": "^0.6.0",
+    "jspdf": "^2.3.1",
+    "qrcodejs2": "0.0.2",
+    "url-search-params": "~0.9.0",
+    "view-design": "^4.2.0",
+    "vue-count-to": "^1.0.13",
+    "vue-lottie": "^0.2.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.1",
+    "autoprefixer": "^10.4.5",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-vue": "^8.7.1",
+    "husky": "^7.0.4",
+    "less": "^4.0.0",
+    "less-loader": "^10.2.0",
+    "mockjs": "^1.1.0",
+    "vite": "^2.9.5",
+    "vite-plugin-html": "^3.2.0"
+  },
+  "engines": {
+    "node": ">= 12.0.0",
+    "npm": ">= 6.9.0"
+  },
+  "browserslist": ["> 1%", "last 2 versions"]
+}
