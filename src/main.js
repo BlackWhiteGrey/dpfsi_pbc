@@ -11,7 +11,6 @@ import myConfig from './config';
 
 axios.defaults.baseURL = myConfig.APIBaseURL;
 
-console.log("I'm here");
 // http request 拦截器
 axios.interceptors.request.use(
   (config) => {
@@ -56,9 +55,10 @@ axios.interceptors.response.use(
   }
 );
 
-Vue.prototype.$http = axios;
-Vue.config.productionTip = false;
-
 const app = createApp(App);
+app.config.globalProperties.$http = axios;
+app.config.productionTip = false;
 
 app.use(router).use(store).use(ViewUIPlus).mount('#app');
+
+export default vm;

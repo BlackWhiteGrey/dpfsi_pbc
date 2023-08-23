@@ -94,11 +94,6 @@ const routes = [
     name: '404页面',
     component: () => import('@/views/common/error/error'),
   },
-  {
-    path: '*',
-    name: '未找到页面',
-    redirect: '/404',
-  },
 ];
 
 const router = createRouter({

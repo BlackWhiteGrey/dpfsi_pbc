@@ -459,7 +459,7 @@
 
 <script>
 import rankList from '@/components/rankList';
-import 'echarts/map/js/china.js';
+// import 'echarts/map/js/china.js';
 import echarts from 'echarts';
 import countTo from 'vue-count-to';
 import { TagCanvas } from '../../../static/js/tagcanvas.min.js';
