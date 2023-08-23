@@ -1,7 +1,7 @@
 <template>
   <div>
     <Modal
-      v-model="msgOpen"
+      :model-value="msgOpen"
       title="金融标准化在线交流平台"
       width="672"
       :closable="false"

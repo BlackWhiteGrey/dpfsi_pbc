@@ -44,13 +44,13 @@ const routes = [
   {
     path: '/platform',
     name: 'Platform Layout',
-    component: () => import('@/views/layout/layout'),
+    component: () => import('@/views/layout/layout.vue'),
     redirect: '/platform/index',
     children: [
       {
         path: 'index',
         name: 'Statics Index',
-        component: () => import('@/views/index/index'),
+        component: () => import('@/views/index/index.vue'),
         meta: { importsAuth: true },
       },
       {

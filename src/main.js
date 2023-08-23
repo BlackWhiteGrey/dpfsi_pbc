@@ -61,4 +61,4 @@ app.config.productionTip = false;
 
 app.use(router).use(store).use(ViewUIPlus).mount('#app');
 
-export default vm;
+export default app;

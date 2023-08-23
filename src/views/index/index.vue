@@ -460,7 +460,7 @@
 <script>
 import rankList from '@/components/rankList';
 // import 'echarts/map/js/china.js';
-import echarts from 'echarts';
+import * as echarts from 'echarts';
 import countTo from 'vue-count-to';
 import { TagCanvas } from '../../common/js/tagcanvas.min.js';
 import { geoCoordMap } from '../../common/js/geocoord.js';
