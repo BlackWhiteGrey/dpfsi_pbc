@@ -1,13 +1,13 @@
 // import api from '../api/index'
 import * as types from './mutation-types';
-import app from '@/main';
+import vm from '@/main';
 
 // 全局的actions
 
 // questionList
 export const getNaire = ({ commit, state }, data) => {
   console.log('commit REQUEST_QUESTION_LIST');
-  return app.$http.post('/naire/detail', {
+  return vm.$http.post('/naire/detail', {
     n_id: data.n_id,
     u_id: data.u_id,
     u_ip: data.u_ip,
@@ -17,7 +17,7 @@ export const getNaire = ({ commit, state }, data) => {
 // questionList
 export const editNaire = ({ commit, state }, data) => {
   console.log('commit REQUEST_QUESTION_LIST');
-  return app.$http.post('/naire/edit', {
+  return vm.$http.post('/naire/edit', {
     n_id: data.n_id,
   });
 };
@@ -39,7 +39,7 @@ export const updateNaire = ({ commit, state }, data) => {
 export const saveNewNaire = ({ commit, state }, data) => {
   const _naire = Object.assign({}, state.naire);
   _naire.deadline = new Date(_naire.deadline).getTime();
-  return app.$http.post('/naire/save', {
+  return vm.$http.post('/naire/save', {
     naire: _naire,
     userid: JSON.parse(localStorage.getItem('USER')).u_id,
     status: state.status,
@@ -49,7 +49,7 @@ export const saveNewNaire = ({ commit, state }, data) => {
 export const updateNewNaire = ({ commit, state }, data) => {
   const _naire = Object.assign({}, state.naire);
   _naire.deadline = new Date(_naire.deadline).getTime();
-  return app.$http.post('/naire/update', {
+  return vm.$http.post('/naire/update', {
     naire: _naire,
     userid: JSON.parse(localStorage.getItem('USER')).u_id,
     status: state.status,

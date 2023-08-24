@@ -1,13 +1,14 @@
-import { createApp } from 'vue';
-import ViewUIPlus from 'view-ui-plus';
-import App from './App.vue';
-import router from './router';
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import App from './App';
+import Vue from 'vue';
+import router from './router/index.js';
 import store from './store';
-import './styles/index.less';
-// import './mock'
 import axios from 'axios';
-// import IEcharts from 'vue-echarts-v3/src/full.vue';
+import './styles/iview.css'; // 使用 CSS
 import myConfig from './config';
+import ViewUI from 'view-ui-plus';
+Vue.use(ViewUI);
 
 axios.defaults.baseURL = myConfig.APIBaseURL;
 
@@ -55,10 +56,15 @@ axios.interceptors.response.use(
   }
 );
 
-const app = createApp(App);
-app.config.globalProperties.$http = axios;
-app.config.productionTip = false;
+Vue.prototype.$http = axios;
+Vue.config.productionTip = false;
 
-app.use(router).use(store).use(ViewUIPlus).mount('#app');
+/* eslint-disable no-new */
+const vm = new Vue({
+  el: '#app',
+  router,
+  store,
+  ...App,
+}).$mount('#app');
 
-export default app;
+export default vm;
